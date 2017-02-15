@@ -18,6 +18,7 @@ import material from '../native-base-theme/variables/material';
 
 const contents = [
   { title: 'フェードするローディング', onPress: () => Actions.fadeLoading() },
+  { title: 'グラデーションサンプル', onPress: () => Actions.linearGradientExample() },
 ];
 
 export default class HomeScreen extends Component {
@@ -30,7 +31,6 @@ export default class HomeScreen extends Component {
   }
 
   renderRow(props) {
-    console.log(props);
     return (
       <ListItem onPress={props.onPress}>
         <Text>{props.title}</Text>

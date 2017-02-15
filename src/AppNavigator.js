@@ -4,12 +4,13 @@ import { connect } from 'react-redux';
 
 import HomeScreen from './screens/HomeScreen';
 import FadeLoadingScreen from './screens/FadeLoading/Screen';
+import LinearGradientExampleScreen from './screens/LinearGradientExample/Screen';
 
 const RouterWithRedux = connect()(Router);
 
 const getSceneStyle = (props, computedProps) => {
   const style = {
-    flex: 1
+    flex: 1,
   };
   if (computedProps.isActive) {
     style.marginTop = computedProps.hideNavBar ? 0 : 64;
@@ -22,9 +23,10 @@ export default class AppNavigator extends Component {
   render() {
     return (
       <RouterWithRedux getSceneStyle={getSceneStyle}>
-        <Scene key="root">
+        <Scene key="root" hideTabBar>
           <Scene initial key="home" title="ホーム" component={HomeScreen} />
-          <Scene key="fadeLoading" component={FadeLoadingScreen} />
+          <Scene key="fadeLoading" title="フェードするローディング" component={FadeLoadingScreen} />
+          <Scene key="linearGradientExample" title="グラデーション" component={LinearGradientExampleScreen} />
         </Scene>
       </RouterWithRedux>
     );

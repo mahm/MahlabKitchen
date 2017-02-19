@@ -19,6 +19,7 @@ import material from '../native-base-theme/variables/material';
 const contents = [
   { title: 'フェードするローディング', onPress: () => Actions.fadeLoading() },
   { title: 'グラデーションサンプル', onPress: () => Actions.linearGradientExample() },
+  { title: 'スワイプでめくれるカード', onPress: () => Actions.swipeCardExample() },
 ];
 
 export default class HomeScreen extends Component {

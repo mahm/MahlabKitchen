@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import FadeLoadingScreen from './screens/FadeLoading/Screen';
 import LinearGradientExampleScreen from './screens/LinearGradientExample/Screen';
+import SwipeCardExampleScreen from './screens/SwipeCardExample/Screen';
 
 const RouterWithRedux = connect()(Router);
 
@@ -27,6 +28,7 @@ export default class AppNavigator extends Component {
           <Scene initial key="home" title="ホーム" component={HomeScreen} />
           <Scene key="fadeLoading" title="フェードするローディング" component={FadeLoadingScreen} />
           <Scene key="linearGradientExample" title="グラデーション" component={LinearGradientExampleScreen} />
+          <Scene key="swipeCardExample" title="スワイプでめくれるカード" component={SwipeCardExampleScreen} />
         </Scene>
       </RouterWithRedux>
     );
